@@ -1,0 +1,126 @@
+* {
+    font-family: 'Inter', system-ui;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    position: fixed;
+    overflow-y: scroll;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(.49, .5, .61, .6), visibility 0.3s cubic-bezier(.49, .5, .61, .6);
+    overflow: hidden;
+}
+
+.overlayVisible {
+    visibility: visible;
+    opacity: 1;
+
+    .drawer {
+        transform: translateX(0);
+    }
+}
+
+.drawer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 420px;
+    height: 100%;
+    right: 0;
+    background: #ffffff;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+
+    .close {
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .items {
+        flex: 1;
+        overflow: auto;
+        margin-bottom: 40px;
+    }
+
+    .orderButton {
+        width: 100%;
+        height: 55px;
+        background: #9dd558;
+        border-radius: 18px;
+        border: 0;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.1s ease-in-out;
+
+        &:disabled {
+            animation: button-loading 0.6s ease-in-out infinite;
+        }
+
+        &:hover {
+            background: lighten(#9dd558, 5%);
+        }
+
+        &:active {
+            background: darken(#9dd558, 5%);
+        }
+    }
+
+    .divOrderButton {
+        padding-top: 10px;
+    }
+
+    h2 {
+        margin: 0;
+
+        img {
+            cursor: pointer;
+        }
+    }
+}
+
+.price {
+    padding-top: 40px;
+}
+
+.cartTotalBlock {
+    ul {
+        display: block;
+    }
+
+    li {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+
+
+        div {
+            flex: 1;
+            height: 1px;
+            border-bottom: 1px solid #dfdfdf;
+            position: relative;
+            top: -4px;
+            margin: 0 7px;
+        }
+    }
+
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
