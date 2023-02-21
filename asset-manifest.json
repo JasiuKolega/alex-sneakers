@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/alex-sneakers/static/css/main.a2da3c15.css",
-    "main.js": "/alex-sneakers/static/js/main.48d7b0ae.js",
+    "main.js": "/alex-sneakers/static/js/main.5e04c9aa.js",
     "index.html": "/alex-sneakers/index.html",
     "main.a2da3c15.css.map": "/alex-sneakers/static/css/main.a2da3c15.css.map",
-    "main.48d7b0ae.js.map": "/alex-sneakers/static/js/main.48d7b0ae.js.map"
+    "main.5e04c9aa.js.map": "/alex-sneakers/static/js/main.5e04c9aa.js.map"
   },
   "entrypoints": [
     "static/css/main.a2da3c15.css",
-    "static/js/main.48d7b0ae.js"
+    "static/js/main.5e04c9aa.js"
   ]
 }
